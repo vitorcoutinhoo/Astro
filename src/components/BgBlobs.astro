@@ -1,0 +1,62 @@
+<div class="bg-blobs" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+</div>
+
+<style>
+  .bg-blobs {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .blob {
+    position: absolute;
+    border: 1.5px solid var(--accent);
+    opacity: 0.32;
+  }
+
+  /* Top-right, grande */
+  .blob-1 {
+    width: 72vw;
+    height: 60vw;
+    top: -6%;
+    right: -18%;
+    border-radius: 45% 55% 62% 38% / 42% 58% 44% 56%;
+    transform: rotate(-22deg);
+  }
+
+  /* Mid-left, alongado vertical */
+  .blob-2 {
+    width: 48vw;
+    height: 70vw;
+    top: 24%;
+    left: -14%;
+    border-radius: 62% 38% 34% 66% / 56% 44% 62% 38%;
+    transform: rotate(14deg);
+  }
+
+  /* Mid-right */
+  .blob-3 {
+    width: 62vw;
+    height: 50vw;
+    top: 52%;
+    right: -12%;
+    border-radius: 38% 62% 55% 45% / 50% 40% 60% 50%;
+    transform: rotate(-16deg);
+  }
+
+  /* Bottom-left */
+  .blob-4 {
+    width: 50vw;
+    height: 58vw;
+    top: 78%;
+    left: -10%;
+    border-radius: 55% 45% 40% 60% / 48% 58% 42% 52%;
+    transform: rotate(8deg);
+  }
+</style>

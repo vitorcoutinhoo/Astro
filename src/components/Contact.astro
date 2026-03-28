@@ -1,0 +1,76 @@
+<section class="contact" id="contact">
+  <p class="section-label">Contato</p>
+  <h2 class="contact-heading">
+    Próximo projeto:<br /><em>o seu.</em>
+  </h2>
+  <div class="contact-bottom">
+    <a href="mailto:seu@email.com" class="btn-primary">
+      Manda um email →
+    </a>
+    <div class="social-links">
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .contact-heading {
+    font-size: clamp(2.75rem, 6.5vw, 6.5rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1;
+  }
+
+  .contact-heading em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  .contact-bottom {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    padding: 0.9375rem 2rem;
+    border-radius: 0.25rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: -0.01em;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(55, 48, 163, 0.25);
+  }
+
+  .social-links { display: flex; gap: 2rem; }
+
+  .social-links a {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .social-links a:hover { color: var(--ink); }
+</style>

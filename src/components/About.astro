@@ -1,0 +1,97 @@
+<section class="about" id="about">
+  <p class="section-label">Sobre</p>
+  <div class="about-grid">
+    <div class="about-bio">
+      <p>
+        Oi, sou Vitor. Trabalho com desenvolvimento web com foco em construir
+        produtos que funcionam — não só na demo,
+        <span class="highlight">mas em produção com usuários reais</span>.
+        Me importo com os detalhes que separam um produto bom
+        de um produto que as pessoas recomendam.
+      </p>
+      <p>
+        Tenho experiência em startups em fase inicial e em sistemas que
+        precisam escalar. Prefiro código direto e testável a arquitetura
+        elaborada demais. Atualmente explorando edge computing
+        e a interseção entre developer experience e performance real.
+      </p>
+    </div>
+    <div class="about-details">
+      <div class="detail-group">
+        <h4>Stack</h4>
+        <ul>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Astro</li>
+          <li>PostgreSQL</li>
+          <li>Docker</li>
+        </ul>
+      </div>
+      <div class="detail-group">
+        <h4>Atualmente</h4>
+        <ul>
+          <li>Aberto a trabalho</li>
+          <li>Brasil 🇧🇷</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about { border-top: 1px solid var(--border); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 8rem;
+    align-items: start;
+  }
+
+  .about-bio p {
+    font-size: 1.125rem;
+    line-height: 1.9;
+    color: var(--body);
+  }
+
+  .about-bio p + p { margin-top: 1.5rem; }
+
+  .about-bio .highlight {
+    color: var(--ink);
+    opacity: 1;
+    font-weight: 500;
+  }
+
+  .about-details { display: flex; flex-direction: column; gap: 2.75rem; }
+
+  .detail-group h4 {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.875rem;
+  }
+
+  .detail-group ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .detail-group li {
+    font-family: var(--mono);
+    font-size: 0.875rem;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.3125rem 0.75rem;
+    border-radius: 0.25rem;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+  }
+</style>

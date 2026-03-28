@@ -1,0 +1,128 @@
+<section class="hero">
+  <div class="hero-main">
+    <p class="hero-label">Disponível para projetos</p>
+    <h1 class="hero-title">
+      <span class="line"><span class="word">Full-stack</span></span>
+      <span class="line"><span class="word accent">Developer</span></span>
+      <span class="line"><span class="word">& creator.</span></span>
+    </h1>
+  </div>
+  <div class="hero-bottom">
+    <p class="hero-tagline">
+      Gosto de problemas mal-especificados
+      e prazos reais. Entrego produto —
+      não só código.
+    </p>
+    <div class="scroll-hint">scroll</div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100svh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: 0 3rem 3rem;
+    padding-top: 7rem;
+  }
+
+  .hero-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
+  }
+
+  .hero-label {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  .hero-label::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: var(--muted);
+    flex-shrink: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(3.75rem, 10.5vw, 11rem);
+    font-weight: 800;
+    line-height: 0.93;
+    letter-spacing: -0.035em;
+  }
+
+  .hero-title .line {
+    display: block;
+    overflow: hidden;
+  }
+
+  .hero-title .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(105%);
+  }
+
+  .hero-title .accent { color: var(--accent); }
+
+  .hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+  }
+
+  .hero-tagline {
+    max-width: 34ch;
+    color: var(--body);
+    font-size: 1.1875rem;
+    line-height: 1.75;
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  .scroll-hint {
+    font-family: var(--mono);
+    font-size: 0.6875rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    opacity: 0;
+  }
+
+  .scroll-hint::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 3.5rem;
+    background: linear-gradient(to bottom, var(--muted), transparent);
+    animation: scrollDrop 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollDrop {
+    0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+    50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+    51%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+    100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+  }
+
+  @media (max-width: 768px) {
+    .hero { padding: 5rem 1.5rem 2.5rem; }
+  }
+</style>

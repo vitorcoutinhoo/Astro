@@ -1,0 +1,59 @@
+<nav id="nav">
+  <a href="/" class="nav-logo">vm.dev</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.375rem 3rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s, backdrop-filter 0.3s;
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+
+  nav.scrolled {
+    border-color: var(--border);
+    backdrop-filter: blur(12px);
+    background: rgba(247, 244, 239, 0.85);
+  }
+
+  .nav-logo {
+    font-family: var(--mono);
+    font-size: 0.875rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+  }
+</style>
